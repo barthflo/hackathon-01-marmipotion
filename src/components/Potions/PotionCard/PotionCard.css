@@ -1,6 +1,6 @@
 .potion-card {
     width:100%;
-    background: transparent;
+    background: var(--main-color);
 }
 .potion-card figure img{
     object-fit:cover;

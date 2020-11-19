@@ -2,7 +2,7 @@ import './PotionCard.css';
 
 function PotionCard() {
     return (
-        <div className = "potion-card card mb-4">
+        <div className = "potion-card card mb-4 p-4">
             <div className="card-header d-flex flex-column align-items-center ">
                 <h3>Love me tender</h3>
                 <figure className="mt-4">
