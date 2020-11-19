@@ -1,31 +1,29 @@
 @import "../../App.css";
-
 .headerOff {
   display: none;
 }
+
 .headerOn {
   background-color: var(--main-color);
   position: fixed;
+  width: 100%;
   top: 0;
-  width: 100vw;
   display: flex;
-  flex-direction: column;
   justify-content: space-around;
   align-items: center;
   flex-wrap: wrap;
-  padding: var(--spacing-medium) var(--spacing);
+  padding: var(--spacing-medium) 0;
   animation-name: smoke;
   animation-duration: 250ms;
-  z-index:10;
+  z-index: 10;
 }
-header ul {
-  display: none;
-}
+
 header h1 {
   color: var(--secondary-color);
   font-size: var(--spacing-large);
-  padding: 0;
+  padding: 0 auto;
 }
+
 @keyframes smoke {
   0% {
     opacity: 0;
@@ -33,30 +31,49 @@ header h1 {
   50% {
     opacity: 0.5;
   }
-
   100% {
     opacity: 1;
   }
 }
-.containerIconsNavbar {
-  display: flex;
-  justify-content: space-around;
-  width: 100%;
-}
+
 .IconsNavbar {
   width: 40px;
   height: 40px;
-  color: #d4af37;
-}
-h1 span {
-  color: #d4af37;
+  /* color: #d4af37; */
+  color: #e9ae60;
 }
 
-@media screen and (min-width: 1024px) {
+h1 span {
+  color: #e9ae60;
+}
+
+.containerIconsNavbar {
+  display: none;
+}
+
+.content-link {
+  display: flex;
+}
+
+.content-link a{
+  text-decoration: none;
+  font-family: var(--secondary-font);
+  color: var(--secondary-color);
+}
+
+@media screen and (min-width: 415px) and (max-width: 768px) {
   .containerIconsNavbar {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+  }
+  .content-link {
     display: none;
   }
-  header ul {
+  .headerOn{
+    top: 0;
+  }
+  /* header ul {
     display: flex;
     list-style: none;
     color: var(--secondary-color);
@@ -66,8 +83,28 @@ h1 span {
   header ul li {
     padding: 0px var(--spacing);
     font-size: 24px;
-  }
-  .headerOn {
+  } */
+  /* .headerOn {
     flex-direction: row;
+  } */
+}
+
+@media screen and (max-width: 414px){
+  .containerIconsNavbar {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+  }
+  .content-link {
+    display: none;
+  }
+
+  header h1{
+    display: none;
+  }
+
+  .headerOn{
+    top: unset;
+    bottom: 0;
   }
 }

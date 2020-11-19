@@ -24,17 +24,18 @@ export default function Header({activePotions, toggleActive}) {
   };
 
   return (
-    <div>
       <header className={display ? "headerOn" : "headerOff"}>
         <h1>
           <span>M</span>armi<span>P</span>otion
         </h1>
-        <ul>
-          <li onClick={() => toggleActive("Love")}>LOVE</li>
-          <li onClick={() => toggleActive("Strength")}>HEALNESS</li>
-          <li >ESSENTIAL</li>
-          <li>CHEATING</li>
-        </ul>
+
+        <div className="content-link">
+          <a onClick={() => toggleActive("Love")}>LOVE</a>
+          <a onClick={() => toggleActive("Strength")}>HEALNESS</a>
+          <a >ESSENTIAL</a>
+          <a>CHEATING</a>
+        </div>
+        
         <div className="containerIconsNavbar">
           <GiMineralHeart className="IconsNavbar" onClick={() => toggleActive("Love")} />
           <GiGothicCross className="IconsNavbar" onClick={()=>toggleActive("Strength")}/>
@@ -42,6 +43,5 @@ export default function Header({activePotions, toggleActive}) {
           <GiPerspectiveDiceSixFacesSix className="IconsNavbar" />
         </div>
       </header>
-    </div>
   );
 }
