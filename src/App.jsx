@@ -172,6 +172,7 @@ export const potions = [
 
 
 function App() {
+  console.log(potions)
   return (
     <div className="App">
       <h1>Marmipotion</h1>
