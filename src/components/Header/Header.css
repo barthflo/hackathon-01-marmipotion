@@ -13,9 +13,10 @@
   justify-content: space-around;
   align-items: center;
   flex-wrap: wrap;
-  padding: var(--spacing) var(--spacing);
+  padding: var(--spacing-medium) var(--spacing);
   animation-name: smoke;
   animation-duration: 250ms;
+  z-index:10;
 }
 header ul {
   display: none;
