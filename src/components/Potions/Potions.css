@@ -1,0 +1,27 @@
+.potions{
+    min-height:100vh;
+    position:relative;
+    /* background-image: radial-gradient(#003304, var(--main-color)); */
+}
+.potions video{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+.potions h2, .potions h3, .potions p{
+    color: var(--secondary-color);
+}
+.potions h2{
+    font-size:calc(var(--spacing-large) *1.5);
+}
+.potions span, .potions-icons{
+    color:var(--warm-color);
+}
+.potions h3{
+    font-family: var(--secondary-font);
+    color: var(--secondary-color);
+}

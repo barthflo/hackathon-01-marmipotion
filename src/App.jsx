@@ -1,4 +1,5 @@
 import './App.css';
+
 import Amortentia from './assets/Amortentia.jpeg';
 import LuxBrumalis from './assets/LuxBrumalis.jpeg';
 import AmorVincitOmnia from './assets/AmorVincitOmnia.jpeg';
@@ -11,6 +12,11 @@ import LaborumRemedium from './assets/LaborumRemedium.jpeg';
 import ConfusingConcoction from './assets/ConfusingConcoction.jpeg';
 import FelixFelicis from './assets/FelixFelicis.jpeg';
 import Polyjuice from './assets/PolyjuicePotion.jpeg';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Potions from './components/Potions/Potions';
+import {useState, createContext} from 'react';
+import Home from './components/Home/Home';
+import Header from './components/Header/Header';
 
 export const potions = [
   {
@@ -172,11 +178,16 @@ export const potions = [
 
 
 function App() {
-  console.log(potions)
+  const [activePotions, setActivePotions] = useState("Love");
+    const toggleActive = (potions) =>{
+        activePotions!== potions && setActivePotions(potions);
+    };
   return (
     <div className="App">
-      <h1>Marmipotion</h1>
-     </div>
+      <Home />
+      <Header activePotions = {activePotions} toggleActive={toggleActive}/>
+      <Potions activePotions = {activePotions} /> 
+    </div>
   );
 }
 
