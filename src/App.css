@@ -18,7 +18,7 @@ body {
   --secondary-font: 'Fondamento', cursive;
   --main-color: #001902;
   --secondary-color: #FFFCEE;
-  --warm-color:#D4AF37;
+  --warm-color:#E9AE60;
   --spacing: 8px;
   --spacing-medium: calc(var(--spacing) * 2);
   --spacing-large: calc(var(--spacing)* 4);
