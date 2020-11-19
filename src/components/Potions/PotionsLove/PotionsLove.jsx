@@ -1,6 +1,8 @@
 import PotionCard from '../PotionCard/PotionCard';
+import {potions} from '../../../App';
 
 function PotionsLove() {
+    console.log(potions);
     return (
         <div className= "d-flex flex-column align-items-center col-11">
             <h3 className="font-italic text-center mt-3 mb-5">Our Love Potions</h3>
