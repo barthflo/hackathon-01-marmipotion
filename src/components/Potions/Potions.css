@@ -1,0 +1,18 @@
+.potions{
+    min-height:100vh;
+    background-image: radial-gradient(#003304, var(--main-color));
+}
+
+.potions h2, .potions h3, .potions p{
+    color: var(--secondary-color);
+}
+.potions h2{
+    font-size:2.5em;
+}
+.potions span, .potions-icons{
+    color:var(--warm-color);
+}
+.potions h3{
+    font-family: var(--secondary-font);
+    color: var(--secondary-color);
+}

@@ -15,13 +15,13 @@ body{
   --secondary-font : 'Fondamento', cursive;
   --main-color : #001902;
   --secondary-color: #FFFCEE;
+  --warm-color:#D4AF37;
   --spacing: 8px;
   --spacing-medium: calc(var(--spacing) * 2);
   --spacing-large: calc(var(--spacing)* 4);
 }
 
-h1{
+h1, h2, h3{
   font-family: var(--main-font);
-  margin: var(--spacing-large);
 }
 
