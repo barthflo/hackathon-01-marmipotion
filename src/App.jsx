@@ -2,6 +2,7 @@ import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Potions from './components/Potions/Potions';
 import {useState} from 'react';
+import Home from './components/Home/Home';
 
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
           <li className="text-light"><button onClick={()=> toggleActive("Strength") }className="btn btn-outline-dark">Strength Potions</button></li>
       </ul>
       <Potions activePotions = {activePotions} />
+      <Home />
     </div>
   );
 }
