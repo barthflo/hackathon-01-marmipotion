@@ -31,15 +31,15 @@ export default function Header({activePotions, toggleActive}) {
         </h1>
         <ul>
           <li onClick={() => toggleActive("Love")}>LOVE</li>
-          <li onClick={() => toggleActive("Strength")}>HEALNESS</li>
-          <li >ESSENTIAL</li>
-          <li>CHEATING</li>
+          <li onClick={() => toggleActive("Healness")}>HEALNESS</li>
+          <li onClick={() => toggleActive("Essential")}>ESSENTIAL</li>
+          <li onClick={() => toggleActive("Cheating")}>CHEATING</li>
         </ul>
         <div className="containerIconsNavbar">
           <GiMineralHeart className="IconsNavbar" onClick={() => toggleActive("Love")} />
           <GiGothicCross className="IconsNavbar" onClick={()=>toggleActive("Strength")}/>
-          <GiVikingHelmet className="IconsNavbar" />
-          <GiPerspectiveDiceSixFacesSix className="IconsNavbar" />
+          <GiVikingHelmet className="IconsNavbar" onClick={() => toggleActive("Essential")}/>
+          <GiPerspectiveDiceSixFacesSix className="IconsNavbar" onClick={() => toggleActive("Cheating")}/>
         </div>
       </header>
     </div>
