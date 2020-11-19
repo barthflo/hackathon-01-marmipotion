@@ -55,10 +55,21 @@ h1 span {
   display: flex;
 }
 
-.content-link a{
+.content-link a {
   text-decoration: none;
   font-family: var(--secondary-font);
-  color: var(--secondary-color);
+  color: white !important;
+  margin-left: 48px;
+  cursor: pointer;
+  transition: .2s linear;
+}
+
+.content-link a:hover {
+  color: #e9ae60 !important;
+}
+
+a.active {
+  color: #e9ae60 !important;
 }
 
 @media screen and (min-width: 415px) and (max-width: 768px) {
@@ -70,12 +81,12 @@ h1 span {
   .content-link {
     display: none;
   }
-  .headerOn{
+  .headerOn {
     top: 0;
   }
 }
 
-@media screen and (max-width: 414px){
+@media screen and (max-width: 414px) {
   .containerIconsNavbar {
     display: flex;
     justify-content: space-around;
@@ -84,12 +95,10 @@ h1 span {
   .content-link {
     display: none;
   }
-
-  header h1{
+  header h1 {
     display: none;
   }
-
-  .headerOn{
+  .headerOn {
     top: unset;
     bottom: 0;
   }

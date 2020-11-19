@@ -1,5 +1,6 @@
 import React from "react";
 import "./Header.css";
+import classnames from 'classnames';
 import { useState, useEffect } from "react";
 import {
   GiMineralHeart,
@@ -30,10 +31,10 @@ export default function Header({activePotions, toggleActive}) {
         </h1>
 
         <div className="content-link">
-          <a onClick={() => toggleActive("Love")}>LOVE</a>
-          <a onClick={() => toggleActive("Strength")}>HEALNESS</a>
-          <a >ESSENTIAL</a>
-          <a>CHEATING</a>
+          <a onClick={() => toggleActive("Love")} className={classnames({active : activePotions === "Love"})}>LOVE</a>
+          <a onClick={() => toggleActive("Healness")} className={classnames({active : activePotions === "Healness"})}>HEALNESS</a>
+          <a onClick={() => toggleActive("Essential")} className={classnames({active : activePotions === "Essential"})}>ESSENTIAL</a>
+          <a onClick={() => toggleActive("Cheating")} className={classnames({active : activePotions === "Cheating"})}>CHEATING</a>
         </div>
         
         <div className="containerIconsNavbar">
