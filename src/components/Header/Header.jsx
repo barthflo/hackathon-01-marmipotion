@@ -7,11 +7,11 @@ import {
   GiPerspectiveDiceSixFacesSix,
 } from "react-icons/gi";
 
+
 class Header extends React.Component {
   state = {
     display: false,
   };
-
   listenScrollEvent = (e) => {
     if (window.scrollY > window.innerHeight - 10) {
       this.setState({ display: true });
@@ -25,6 +25,8 @@ class Header extends React.Component {
   }
 
   render() {
+    
+    console.log(this.props.toggleActive);
     return (
       <div>
         <header className={this.state.display ? "headerOn" : "headerOff"}>
@@ -32,8 +34,8 @@ class Header extends React.Component {
             <span>M</span>armi<span>P</span>otion
           </h1>
           <ul>
-            <li>LOVE</li>
-            <li>HEALNESS</li>
+            <li >LOVE</li>
+            <li >HEALNESS</li>
             <li>ESSENTIAL</li>
             <li>CHEATING</li>
           </ul>
