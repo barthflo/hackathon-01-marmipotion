@@ -1,0 +1,9 @@
+.footer{
+    background-color: rgb(19, 53, 53);
+    width: 100%;
+    padding: 200px;
+}
+
+.footer p{
+    color: aqua;
+}

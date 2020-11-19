@@ -16,6 +16,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Potions from './components/Potions/Potions';
 import {useState} from 'react';
 import Home from './components/Home/Home';
+import Footer from './components/Footer/Footer';
 
 export const potions = [
   {
@@ -190,6 +191,7 @@ function App() {
       </ul>
       <Potions activePotions = {activePotions} />
       <Home />
+      <Footer />
     </div>
   );
 }
