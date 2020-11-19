@@ -1,6 +1,11 @@
 .potion-card {
     width:100%;
-    background: var(--main-color);
+    background: #001902b2;
+    border: 1px solid var(--secondary-color);
+}
+.potion-card figure{
+    width:300px;
+    height:300px;
 }
 .potion-card figure img{
     object-fit:cover;
@@ -9,6 +14,7 @@
 }
 .potion-card h3{
     color:var(--secondary-color);
+    font-size : 1.8em;
 }
 .potion-card p{
     font-family:var(--secondary-font);
@@ -18,6 +24,10 @@
 @media screen and (min-width: 576px){
     .potion-card figure{
         height:200px;
+        width:100%;
+    }
+    .potion-card h3{
+        min-height:75px;
     }
 }
 
@@ -26,7 +36,8 @@
         width:300px;
     }
     .potion-card figure{
-        height:unset;
+        width:250px;
+        height:250px;
     }
 }
 

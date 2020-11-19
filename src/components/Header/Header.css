@@ -73,20 +73,6 @@ h1 span {
   .headerOn{
     top: 0;
   }
-  /* header ul {
-    display: flex;
-    list-style: none;
-    color: var(--secondary-color);
-    font-family: var(--secondary-font);
-    padding: 0;
-  }
-  header ul li {
-    padding: 0px var(--spacing);
-    font-size: 24px;
-  } */
-  /* .headerOn {
-    flex-direction: row;
-  } */
 }
 
 @media screen and (max-width: 414px){

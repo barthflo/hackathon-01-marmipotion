@@ -1,6 +1,8 @@
 import './Potions.css';
 import PotionsLove from './PotionsLove/PotionsLove';
 import PotionsStrength from './PotionsStrength/PotionsStrength';
+import PotionsEssential from './PotionsEssential/PotionsEssential';
+import PotionsCheating from './PotionsCheating/PotionsCheating';
 import {GiCauldron} from 'react-icons/gi';
 import VideoPotion from '../Home/video/background-video.mp4';
 
@@ -16,8 +18,14 @@ function Potions({activePotions}) {
             {activePotions === "Love" &&
                 <PotionsLove />
             }
-            {activePotions ==="Strength" &&
+            {activePotions ==="Healness" &&
                 <PotionsStrength />
+            } 
+            {activePotions ==="Essential" &&
+                <PotionsEssential />
+            } 
+            {activePotions ==="Cheating" &&
+                <PotionsCheating />
             } 
         </section>
     )
