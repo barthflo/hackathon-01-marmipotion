@@ -1,27 +1,30 @@
 @import url('https://fonts.googleapis.com/css2?family=UnifrakturMaguntia&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Fondamento:ital@0;1&display=swap');
-
 * {
-  box-sizing:border-box;
+  box-sizing: border-box;
 }
 
-body{
-  margin:0;
-  padding:0;
+html {
+  scroll-behavior: smooth;
 }
 
-:root{
-  --main-font : 'UnifrakturMaguntia', cursive;
-  --secondary-font : 'Fondamento', cursive;
-  --main-color : #001902;
+body {
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --main-font: 'UnifrakturMaguntia', cursive;
+  --secondary-font: 'Fondamento', cursive;
+  --main-color: #001902;
   --secondary-color: #FFFCEE;
+  --warm-color:#D4AF37;
   --spacing: 8px;
   --spacing-medium: calc(var(--spacing) * 2);
   --spacing-large: calc(var(--spacing)* 4);
 }
 
-h1{
+h1, h2, h3{
   font-family: var(--main-font);
-  margin: var(--spacing-large);
 }
 
