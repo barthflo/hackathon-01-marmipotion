@@ -14,9 +14,12 @@ import FelixFelicis from './assets/FelixFelicis.jpeg';
 import Polyjuice from './assets/PolyjuicePotion.jpeg';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Potions from './components/Potions/Potions';
-import {useState, createContext} from 'react';
+import {useState, useEffect, createContext} from 'react';
 import Home from './components/Home/Home';
+import Footer from './components/Footer/Footer';
 import Header from './components/Header/Header';
+import Intro from './components/Intro/Intro';
+import SelectionPlants from './components/SelectionPlants/SelectionPlants';
 
 export const potions = [
   {
@@ -36,7 +39,7 @@ export const potions = [
   },
   {
     id: 1,
-    potionName: "lux Brumalis",
+    potionName: "Lux Brumalis",
     potionImg: LuxBrumalis,
     categorie: "Love",
     description: "Lux Brumalis means 'the light of winter', this love potion will only have effect in winter.",
@@ -103,7 +106,7 @@ export const potions = [
     potionName: "Draught of Peace",
     potionImg: DraughtOfPeace,
     categorie: "Essential",
-    description: "!WARNING! It is a very difficult potion to make. The Draught of Peace provides personal comfort, calms anxiety and soothes agitation.",
+    description: "! WARNING ! It is a very difficult potion to make. The Draught of Peace provides personal comfort, calms anxiety and soothes agitation.",
     recipe: [
       "2 cauldron of: ",
       "5.001 spoon of: ",
@@ -174,10 +177,17 @@ export const potions = [
     ],
   },
 ]
-
-
-
+export const PlantsContext = createContext(null);
 function App() {
+  const [plants, setPlants] = useState([]);
+  useEffect(() => {
+    fetch(`https://plantsapi.herokuapp.com/plants`)
+    .then(res => res.json())
+    .then(res => {
+      setPlants(res.data);
+      });
+  }, [])
+  
   const [activePotions, setActivePotions] = useState("Love");
     const toggleActive = (potions) =>{
         activePotions!== potions && setActivePotions(potions);
@@ -186,7 +196,12 @@ function App() {
     <div className="App">
       <Home />
       <Header activePotions = {activePotions} toggleActive={toggleActive}/>
-      <Potions activePotions = {activePotions} /> 
+      <Intro />
+      <PlantsContext.Provider value={{plants}}>
+        <Potions activePotions = {activePotions} />
+      </PlantsContext.Provider>
+      <SelectionPlants plants = {plants} />
+      <Footer />
     </div>
   );
 }

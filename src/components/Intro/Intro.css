@@ -1,0 +1,90 @@
+@import "../../App.css";
+#intro {
+  min-height: 100vh;
+}
+
+.containerIntro {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: var(--secondary-color);
+}
+
+.containerIntro h2 {
+  padding: calc(var(--spacing-large) * 1.5) 0 !important;
+  margin: 0 auto;
+  text-align: center;
+  color: var(--main-color);
+  font-family: var(--secondary-font);
+  width: 70%;
+  font-size: 1.8em !important;
+  font-weight: bold;
+}
+
+.containerIntro img {
+  border-radius: 100%;
+  width: 280px !important;
+  border: 4px solid var(--warm-color);
+}
+
+article {
+  padding-top: var(--spacing-medium);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 90%;
+  margin: 0
+}
+
+.textContainer {
+  padding: calc(var(--spacing-large) * 1.5) 0;
+  width: 70%;
+  text-align: justify;
+  font-family: var(--secondary-font);
+  color: var(--main-color);
+  font-size: 1.3em !important;
+}
+
+.textContainer p:nth-child(3) {
+  text-align: end;
+  font-size: 0.8em;
+}
+
+@media screen and (min-width: 1024px) {
+  .containerIntro h2 {
+    padding: calc(var(--spacing-large) * 4);
+    font-size: calc(var(--spacing-large) * 1.5);
+  }
+  .containerIntro img {
+    display: flex;
+    border-radius: 100%;
+  }
+  article {
+    padding: calc(var(--spacing-large) * 4);
+    flex-direction: row;
+  }
+  .containerIntro {
+    height: 100vh;
+  }
+  .textContainer {
+    padding: 0;
+    font-size: calc(var(--spacing-large) * 1.2);
+  }
+}
+
+@media screen and (min-width: 415px) and (max-width: 768px) {
+  .containerIntro h2 {
+    margin-top: calc(var(--spacing-large) * 3);
+  }
+}
+
+@media screen and (max-width: 414px) {
+  .containerIntro h2 {
+    font-size: calc(var(--spacing-large) * 0.8) !important;
+  }
+  .containerIntro img {
+    width: 240px !important;
+  }
+}
