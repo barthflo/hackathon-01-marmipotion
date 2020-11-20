@@ -13,10 +13,10 @@ function Footer() {
         <div className="footer">
             <div className="lineUp">
                 <div className="social">
-                    <img src={facebookL} alt="social network" />
-                    <img src={instagramL} alt="social network" />
-                    <img src={twitterL} alt="social network" />
-                    <img src={youtubeL} alt="social network" />
+                    <a href=""><img src={facebookL} alt="social network" /></a>
+                    <a href=""><img src={instagramL} alt="social network" /></a>
+                    <a href=""><img src={twitterL} alt="social network" /></a>
+                    <a href=""><img src={youtubeL} alt="social network" /></a>
                 </div>
                 <div className="contact">
                     <h4>CONTACT</h4>

@@ -14,9 +14,18 @@
     text-align: center;
 }
 
+.footer h4 {
+    margin-bottom: calc(var(--spacing-large) * 0.8);
+}
+
 .social img {
     margin: var(--spacing-medium);
     height: 64px;
+    transition: .2s linear;
+}
+
+.social img:hover {
+    transform: rotate(20deg);
 }
 
 .contact {
