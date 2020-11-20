@@ -105,7 +105,7 @@ export const potions = [
     potionName: "Draught of Peace",
     potionImg: DraughtOfPeace,
     categorie: "Essential",
-    description: "!WARNING! It is a very difficult potion to make. The Draught of Peace provides personal comfort, calms anxiety and soothes agitation.",
+    description: "! WARNING ! It is a very difficult potion to make. The Draught of Peace provides personal comfort, calms anxiety and soothes agitation.",
     recipe: [
       "2 cauldron of: ",
       "5.001 spoon of: ",

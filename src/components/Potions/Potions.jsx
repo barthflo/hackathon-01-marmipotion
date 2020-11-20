@@ -20,13 +20,13 @@ function Potions({activePotions}) {
             }
             {activePotions ==="Healness" &&
                 <PotionsStrength />
-            } 
+            }
             {activePotions ==="Essential" &&
                 <PotionsEssential />
-            } 
+            }
             {activePotions ==="Cheating" &&
                 <PotionsCheating />
-            } 
+            }
         </section>
     )
 }

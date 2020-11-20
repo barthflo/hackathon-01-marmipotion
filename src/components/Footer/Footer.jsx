@@ -26,8 +26,8 @@ function Footer() {
             </div>
 
             <div className="copyright">
-                <p>Made with ♥ by MarmiPotion</p>
-                <p>©MarmiPotion - 1000-1254</p>
+                <p>Made with ♥ by ©MarmiPotion - 1000-1254</p>
+                {/* <p>©MarmiPotion - 1000-1254</p> */}
             </div>
         </div>
     )
