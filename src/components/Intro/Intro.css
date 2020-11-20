@@ -8,6 +8,8 @@
   background-color: var(--secondary-color);
 }
 .containerIntro h2 {
+  padding:calc(var(--spacing-large) * 1.5) 0;
+  margin:0;
   text-align: center;
   color: var(--main-color);
   font-family: var(--secondary-font);
@@ -25,8 +27,11 @@ article {
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
+  width: 90%;
+  margin: 0
 }
 .textContainer {
+  padding:calc(var(--spacing-large) * 1.5) 0;
   width: 70%;
   text-align: justify;
   font-family: var(--secondary-font);
@@ -40,7 +45,8 @@ article {
 
 @media screen and (min-width: 1024px) {
   .containerIntro h2 {
-    padding-bottom: 60px;
+    padding:calc(var(--spacing-large) * 4);
+    font-size:calc(var(--spacing-large) * 1.5);
   }
   .containerIntro img {
     display: flex;
@@ -48,9 +54,14 @@ article {
     width: 15%;
   }
   article {
+    padding:calc(var(--spacing-large) * 4);
     flex-direction: row;
   }
   .containerIntro {
     height: 100vh;
+  }
+  .textContainer {
+    padding: 0;
+    font-size: calc(var(--spacing-large) * 1.2);
   }
 }
