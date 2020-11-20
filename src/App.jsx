@@ -19,6 +19,7 @@ import Home from './components/Home/Home';
 import Footer from './components/Footer/Footer';
 import Header from './components/Header/Header';
 import Intro from './components/Intro/Intro';
+import SelectionPlants from './components/SelectionPlants/SelectionPlants';
 
 export const potions = [
   {
@@ -198,6 +199,7 @@ function App() {
       <Header activePotions = {activePotions} toggleActive={toggleActive}/>
       <Intro />
       <Potions activePotions = {activePotions} />
+      <SelectionPlants plants = {plants} />
       <Footer />
     </div>
   );

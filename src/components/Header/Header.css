@@ -22,6 +22,7 @@ header h1 {
   color: var(--secondary-color);
   font-size: var(--spacing-large);
   padding: 0 auto;
+  margin: 0;
 }
 
 @keyframes smoke {
