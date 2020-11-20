@@ -14,10 +14,11 @@ import FelixFelicis from './assets/FelixFelicis.jpeg';
 import Polyjuice from './assets/PolyjuicePotion.jpeg';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Potions from './components/Potions/Potions';
-import {useState, createContext} from 'react';
+import {useState, useEffect} from 'react';
 import Home from './components/Home/Home';
 import Footer from './components/Footer/Footer';
 import Header from './components/Header/Header';
+import Intro from './components/Intro/Intro';
 
 export const potions = [
   {
@@ -175,10 +176,17 @@ export const potions = [
     ],
   },
 ]
-
-
+const apiKey = "gmDjyPYUqAcIKx_nsREfhj5NQUFqdMlFIzUuCnuXrV8";
+const proxyUrl = "https://cors-anywhere.herokuapp.com/";
 
 function App() {
+  const [plants, setPlants] = useState([]);
+  useEffect(() => {
+    fetch(`https://cors-anywhere.herokuapp.com/https://trefle.io/api/v1/plants?token=${apiKey}`)
+    .then(res => res.json())
+    .then(res => setPlants(res))
+  }, [])
+  console.log(plants);
   const [activePotions, setActivePotions] = useState("Love");
     const toggleActive = (potions) =>{
         activePotions!== potions && setActivePotions(potions);
@@ -187,7 +195,8 @@ function App() {
     <div className="App">
       <Home />
       <Header activePotions = {activePotions} toggleActive={toggleActive}/>
-      <Potions activePotions = {activePotions} /> 
+      <Intro />
+      <Potions activePotions = {activePotions} />
       <Footer />
     </div>
   );

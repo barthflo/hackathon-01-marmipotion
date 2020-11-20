@@ -9,7 +9,7 @@ export default function Home(){
                 <source src={VideoPotion} type="video/mp4" />
             </video>
             <div className="content-title">
-                <h1>MarmiPotion</h1>
+                <h1><span>M</span>armi<span>P</span>otion</h1>
                 <p className="desc">Rethink your emotion...</p>
                 <div className="discover">
                     <button className="btn-discover">Discover Now</button>
