@@ -45,4 +45,8 @@
     .potion-card{
         width: calc(100vw /3.9);
     }
+    .potion-card figure{
+        width:280px;
+        height:280px;
+    }
 }

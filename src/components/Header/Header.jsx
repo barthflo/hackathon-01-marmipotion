@@ -39,7 +39,7 @@ export default function Header({activePotions, toggleActive}) {
         
         <div className="containerIconsNavbar">
           <GiMineralHeart className="IconsNavbar" onClick={() => toggleActive("Love")} />
-          <GiGothicCross className="IconsNavbar" onClick={()=>toggleActive("Strength")}/>
+          <GiGothicCross className="IconsNavbar" onClick={()=>toggleActive("Healness")}/>
           <GiVikingHelmet className="IconsNavbar" onClick={() => toggleActive("Essential")}/>
           <GiPerspectiveDiceSixFacesSix className="IconsNavbar" onClick={() => toggleActive("Cheating")}/>
         </div>

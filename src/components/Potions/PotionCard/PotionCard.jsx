@@ -5,7 +5,7 @@ function PotionCard(props) {
         <div className = "potion-card card mb-4 p-4">
             <div className="card-header d-flex flex-column align-items-center ">
                 <h3 className="text-center">{props.potionName}</h3>
-                <figure className="mt-4">
+                <figure className="mt-4 p-3 p-sm-0">
                     <img className="w-100 h-100" src={props.potionImg}/>
                 </figure>
             </div>
