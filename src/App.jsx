@@ -191,10 +191,9 @@ function App() {
     const toggleActive = (potions) =>{
         activePotions!== potions && setActivePotions(potions);
     };
-  console.log(plants);
   return (
     <div className="App">
-      {(plants.length === 0) ?"loading" : plants.map(plant => <li>{plant.common_name}</li>)}
+      {/* {(plants.length === 0) ?"loading" : plants.map(plant => <li>{plant.common_name}</li>)} */}
       <Home />
       <Header activePotions = {activePotions} toggleActive={toggleActive}/>
       <Intro />
