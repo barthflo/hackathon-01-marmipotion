@@ -1,0 +1,56 @@
+@import "../../App.css";
+
+.containerIntro {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: var(--secondary-color);
+}
+.containerIntro h2 {
+  text-align: center;
+  color: var(--main-color);
+  font-family: var(--secondary-font);
+  width: 80%;
+  font-size: 1.3em;
+  font-weight: bold;
+}
+.containerIntro img {
+  border-radius: 100%;
+  width: 50vw;
+}
+article {
+  padding-top: var(--spacing-medium);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+.textContainer {
+  width: 70%;
+  text-align: justify;
+  font-family: var(--secondary-font);
+  color: var(--main-color);
+  font-size: 1.3em;
+}
+.textContainer p:nth-child(3) {
+  text-align: end;
+  font-size: 0.8em;
+}
+
+@media screen and (min-width: 1024px) {
+  .containerIntro h2 {
+    padding-bottom: 60px;
+  }
+  .containerIntro img {
+    display: flex;
+    border-radius: 100%;
+    width: 15%;
+  }
+  article {
+    flex-direction: row;
+  }
+  .containerIntro {
+    height: 100vh;
+  }
+}
