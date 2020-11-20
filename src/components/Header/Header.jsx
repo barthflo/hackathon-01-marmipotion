@@ -17,10 +17,18 @@ export default function Header({activePotions, toggleActive}) {
   }, []);
 
   const listenScrollEvent = (e) => {
-    if (window.scrollY > window.innerHeight) {
-      setDisplay(true);
-    } else {
-      setDisplay(false);
+    if (window.innerWidth > 414){
+      if (window.scrollY > window.innerHeight - 100){
+        setDisplay(true);
+      } else {
+        setDisplay(false);
+      }
+    } else{
+      if ((window.scrollY > window.innerHeight - 400) && (display === false)){
+        setDisplay(true);
+      } else {
+        setDisplay(false);
+      }
     }
   };
 
@@ -31,17 +39,17 @@ export default function Header({activePotions, toggleActive}) {
         </h1>
 
         <div className="content-link">
-          <a onClick={() => toggleActive("Love")} className={classnames({active : activePotions === "Love"})}>LOVE</a>
-          <a onClick={() => toggleActive("Healness")} className={classnames({active : activePotions === "Healness"})}>HEALNESS</a>
-          <a onClick={() => toggleActive("Essential")} className={classnames({active : activePotions === "Essential"})}>ESSENTIAL</a>
-          <a onClick={() => toggleActive("Cheating")} className={classnames({active : activePotions === "Cheating"})}>CHEATING</a>
+          <a href="#potions" onClick={() => toggleActive("Love")} className={classnames({active : activePotions === "Love"})}>LOVE</a>
+          <a href="#potions" onClick={() => toggleActive("Healness")} className={classnames({active : activePotions === "Healness"})}>HEALNESS</a>
+          <a href="#potions" onClick={() => toggleActive("Essential")} className={classnames({active : activePotions === "Essential"})}>ESSENTIAL</a>
+          <a href="#potions" onClick={() => toggleActive("Cheating")} className={classnames({active : activePotions === "Cheating"})}>CHEATING</a>
         </div>
         
         <div className="containerIconsNavbar">
-          <GiMineralHeart className="IconsNavbar" onClick={() => toggleActive("Love")} />
-          <GiGothicCross className="IconsNavbar" onClick={()=>toggleActive("Healness")}/>
-          <GiVikingHelmet className="IconsNavbar" onClick={() => toggleActive("Essential")}/>
-          <GiPerspectiveDiceSixFacesSix className="IconsNavbar" onClick={() => toggleActive("Cheating")}/>
+          <a href="#potions"><GiMineralHeart className="IconsNavbar" onClick={() => toggleActive("Love")} /></a>
+          <a href="#potions"><GiGothicCross className="IconsNavbar" onClick={()=>toggleActive("Healness")}/></a>
+          <a href="#potions"><GiVikingHelmet className="IconsNavbar" onClick={() => toggleActive("Essential")}/></a>
+          <a href="#potions"><GiPerspectiveDiceSixFacesSix className="IconsNavbar" onClick={() => toggleActive("Cheating")}/></a>
         </div>
       </header>
   );

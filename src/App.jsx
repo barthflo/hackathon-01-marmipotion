@@ -37,7 +37,7 @@ export const potions = [
   },
   {
     id: 1,
-    potionName: "lux Brumalis",
+    potionName: "Lux Brumalis",
     potionImg: LuxBrumalis,
     categorie: "Love",
     description: "Lux Brumalis means 'the light of winter', this love potion will only have effect in winter.",
