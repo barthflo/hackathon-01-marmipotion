@@ -1,5 +1,6 @@
 import React from "react";
 import "./Header.css";
+import classnames from 'classnames';
 import { useState, useEffect } from "react";
 import {
   GiMineralHeart,
@@ -24,24 +25,24 @@ export default function Header({activePotions, toggleActive}) {
   };
 
   return (
-    <div>
       <header className={display ? "headerOn" : "headerOff"}>
         <h1>
           <span>M</span>armi<span>P</span>otion
         </h1>
-        <ul>
-          <li onClick={() => toggleActive("Love")}>LOVE</li>
-          <li onClick={() => toggleActive("Healness")}>HEALNESS</li>
-          <li onClick={() => toggleActive("Essential")}>ESSENTIAL</li>
-          <li onClick={() => toggleActive("Cheating")}>CHEATING</li>
-        </ul>
+
+        <div className="content-link">
+          <a onClick={() => toggleActive("Love")} className={classnames({active : activePotions === "Love"})}>LOVE</a>
+          <a onClick={() => toggleActive("Healness")} className={classnames({active : activePotions === "Healness"})}>HEALNESS</a>
+          <a onClick={() => toggleActive("Essential")} className={classnames({active : activePotions === "Essential"})}>ESSENTIAL</a>
+          <a onClick={() => toggleActive("Cheating")} className={classnames({active : activePotions === "Cheating"})}>CHEATING</a>
+        </div>
+        
         <div className="containerIconsNavbar">
           <GiMineralHeart className="IconsNavbar" onClick={() => toggleActive("Love")} />
-          <GiGothicCross className="IconsNavbar" onClick={()=>toggleActive("Strength")}/>
+          <GiGothicCross className="IconsNavbar" onClick={()=>toggleActive("Healness")}/>
           <GiVikingHelmet className="IconsNavbar" onClick={() => toggleActive("Essential")}/>
           <GiPerspectiveDiceSixFacesSix className="IconsNavbar" onClick={() => toggleActive("Cheating")}/>
         </div>
       </header>
-    </div>
   );
 }

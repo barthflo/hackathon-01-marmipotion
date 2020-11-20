@@ -30,6 +30,8 @@
     color: var(--secondary-color);
     text-shadow: 0px 0px 8px var(--main-color);
     text-align: center;
+    margin-top: calc(var(--spacing-large) * 2);
+    margin-bottom: var(--spacing-large);
 }
 
 .full-screen .desc {
@@ -37,12 +39,14 @@
     color: var(--secondary-color);
     font-size: calc(var(--spacing-large) * 1.8);
     text-align: center;
+    margin-bottom: var(--spacing-large);
 }
 
 .full-screen .discover {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: 50px;
 }
 
 .full-screen .btn-discover {
@@ -67,9 +71,13 @@
 @media screen and (min-width: 415px) and (max-width: 768px){
     .full-screen h1 {
         font-size: calc(var(--spacing-large) * 3);
+        margin-top: calc(var(--spacing-large) * 1.5);
     }
     .full-screen .desc {
         font-size: calc(var(--spacing-large) * 1.6);
+    }
+    .full-screen .discover{
+        margin-top: var(--spacing-medium);
     }
     .full-screen .btn-discover {
         font-size: calc(var(--spacing-medium) * 1.4);
@@ -80,9 +88,13 @@
 @media screen and (max-width: 414px) {
     .full-screen h1 {
         font-size: calc(var(--spacing-large) * 1.6);
+        margin-top: calc(var(--spacing-large) * 1.5);
     }
     .full-screen .desc {
         font-size: calc(var(--spacing-large) * 0.9);
+    }
+    .full-screen .discover{
+        margin-top: var(--spacing-medium);
     }
     .full-screen .btn-discover {
         width: 196px;
