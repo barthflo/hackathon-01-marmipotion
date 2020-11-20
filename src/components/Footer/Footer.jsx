@@ -19,15 +19,15 @@ function Footer() {
                     <img src={youtubeL} alt="social network" />
                 </div>
                 <div className="contact">
-                    <p>CONTACT</p>
-                    <p>Green carrier pigeon, call name: <span>'Sylvain-Louis'</span></p>
-                    <p>Address: <span>Seventh smoking tree in the Candy Forest</span></p>
+                    <h4>CONTACT</h4>
+                    <p>Green carrier pigeon, call name: 'Sylvain-Louis'</p>
+                    <p>Address: Seventh smoking tree in the Candy Forest</p>
                 </div>
             </div>
 
             <div className="copyright">
-                <p>Made with ♥ by Marmipotion</p>
-                <p>©Marmipotion - 1000-1254</p>
+                <p>Made with ♥ by MarmiPotion</p>
+                <p>©MarmiPotion - 1000-1254</p>
             </div>
         </div>
     )
