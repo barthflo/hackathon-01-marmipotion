@@ -14,7 +14,7 @@ import FelixFelicis from './assets/FelixFelicis.jpeg';
 import Polyjuice from './assets/PolyjuicePotion.jpeg';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Potions from './components/Potions/Potions';
-import {useState, useEffect} from 'react';
+import {useState, useEffect, createContext} from 'react';
 import Home from './components/Home/Home';
 import Footer from './components/Footer/Footer';
 import Header from './components/Header/Header';
@@ -177,7 +177,7 @@ export const potions = [
     ],
   },
 ]
-
+export const PlantsContext = createContext(null);
 function App() {
   const [plants, setPlants] = useState([]);
   useEffect(() => {
@@ -194,11 +194,12 @@ function App() {
     };
   return (
     <div className="App">
-      {/* {(plants.length === 0) ?"loading" : plants.map(plant => <li>{plant.common_name}</li>)} */}
       <Home />
       <Header activePotions = {activePotions} toggleActive={toggleActive}/>
       <Intro />
-      <Potions activePotions = {activePotions} />
+      <PlantsContext.Provider value={{plants}}>
+        <Potions activePotions = {activePotions} />
+      </PlantsContext.Provider>
       <SelectionPlants plants = {plants} />
       <Footer />
     </div>

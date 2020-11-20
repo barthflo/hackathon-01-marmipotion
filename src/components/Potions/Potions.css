@@ -20,7 +20,7 @@
 
 .potions h2 {
     font-size: calc(var(--spacing-large) * 2);
-    margin-top: calc(var(--spacing-large) * 2);
+    margin-top: calc(var(--spacing-large) * 1.2);
 }
 
 .potions span, .potions-icons {
