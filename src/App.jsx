@@ -175,23 +175,25 @@ export const potions = [
     ],
   },
 ]
-const apiKey = "gmDjyPYUqAcIKx_nsREfhj5NQUFqdMlFIzUuCnuXrV8";
-const proxyUrl = "https://cors-anywhere.herokuapp.com/";
 
 function App() {
   const [plants, setPlants] = useState([]);
   useEffect(() => {
-    fetch(`https://cors-anywhere.herokuapp.com/https://trefle.io/api/v1/plants?token=${apiKey}`)
+    fetch(`https://plantsapi.herokuapp.com/plants`)
     .then(res => res.json())
-    .then(res => setPlants(res))
+    .then(res => {
+      setPlants(res.data);
+      });
   }, [])
-  console.log(plants);
+  
   const [activePotions, setActivePotions] = useState("Love");
     const toggleActive = (potions) =>{
         activePotions!== potions && setActivePotions(potions);
     };
+  console.log(plants);
   return (
     <div className="App">
+      {(plants.length === 0) ?"loading" : plants.map(plant => <li>{plant.common_name}</li>)}
       <Home />
       <Header activePotions = {activePotions} toggleActive={toggleActive}/>
       <Intro />
