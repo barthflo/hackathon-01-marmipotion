@@ -8,7 +8,7 @@ import VideoPotion from '../Home/video/background-video.mp4';
 
 function Potions({activePotions}) {
     return (
-        <section className = "potions container-fluid d-flex flex-column align-items-center pt-5">
+        <section id="potions" className = "potions container-fluid d-flex flex-column align-items-center pt-5">
             <video autoPlay loop muted>
                 <source src={VideoPotion} type="video/mp4" />
             </video>
@@ -20,13 +20,13 @@ function Potions({activePotions}) {
             }
             {activePotions ==="Healness" &&
                 <PotionsStrength />
-            } 
+            }
             {activePotions ==="Essential" &&
                 <PotionsEssential />
-            } 
+            }
             {activePotions ==="Cheating" &&
                 <PotionsCheating />
-            } 
+            }
         </section>
     )
 }

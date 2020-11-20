@@ -1,4 +1,7 @@
 @import "../../App.css";
+#intro {
+  min-height: 100vh;
+}
 
 .containerIntro {
   display: flex;
@@ -7,20 +10,23 @@
   flex-direction: column;
   background-color: var(--secondary-color);
 }
+
 .containerIntro h2 {
-  padding:calc(var(--spacing-large) * 1.5) 0;
-  margin:0;
+  padding: calc(var(--spacing-large) * 1.5) 0 !important;
+  margin: 0 auto;
   text-align: center;
   color: var(--main-color);
   font-family: var(--secondary-font);
-  width: 80%;
-  font-size: 1.3em;
+  width: 70%;
+  font-size: 1.8em !important;
   font-weight: bold;
 }
+
 .containerIntro img {
   border-radius: 100%;
-  width: 50vw;
+  width: 60vw;
 }
+
 article {
   padding-top: var(--spacing-medium);
   display: flex;
@@ -30,14 +36,16 @@ article {
   width: 90%;
   margin: 0
 }
+
 .textContainer {
-  padding:calc(var(--spacing-large) * 1.5) 0;
+  padding: calc(var(--spacing-large) * 1.5) 0;
   width: 70%;
   text-align: justify;
   font-family: var(--secondary-font);
   color: var(--main-color);
-  font-size: 1.3em;
+  font-size: 1.3em !important;
 }
+
 .textContainer p:nth-child(3) {
   text-align: end;
   font-size: 0.8em;
@@ -45,8 +53,8 @@ article {
 
 @media screen and (min-width: 1024px) {
   .containerIntro h2 {
-    padding:calc(var(--spacing-large) * 4);
-    font-size:calc(var(--spacing-large) * 1.5);
+    padding: calc(var(--spacing-large) * 4);
+    font-size: calc(var(--spacing-large) * 1.5);
   }
   .containerIntro img {
     display: flex;
@@ -54,7 +62,7 @@ article {
     width: 15%;
   }
   article {
-    padding:calc(var(--spacing-large) * 4);
+    padding: calc(var(--spacing-large) * 4);
     flex-direction: row;
   }
   .containerIntro {
@@ -63,5 +71,17 @@ article {
   .textContainer {
     padding: 0;
     font-size: calc(var(--spacing-large) * 1.2);
+  }
+}
+
+@media screen and (min-width: 415px) and (max-width: 768px) {
+  .containerIntro h2 {
+    margin-top: calc(var(--spacing-large) * 3);
+  }
+}
+
+@media screen and (max-width: 414px) {
+  .containerIntro h2 {
+    font-size: calc(var(--spacing-large) * 0.8) !important;
   }
 }

@@ -4,12 +4,12 @@ import Portrait from "../../assets/Portrait.png";
 
 export default function Intro() {
   return (
-    <div>
+    <div id="intro">
       <div className="containerIntro">
         <h2>
-          Are you witcher? You tired of getting kicked out? Tired of pretending
-          to be the wicked witch? Come and try our potions which are useful to
-          the population!!
+          Are you witcher ? You tired of getting kicked out ? Tired of pretending
+          to be the wicked witch ? Come and try our potions which are useful to
+          the population !!
         </h2>
         <article>
           <img src={Portrait} alt="Photography of Agnes" />

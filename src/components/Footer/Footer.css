@@ -1,40 +1,38 @@
 @import '../../App.css';
-
-.footer{
+.footer {
     background-color: #001902;
     width: 100%;
-    padding: var(--spacing-medium); 
+    padding: var(--spacing-medium);
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-
-.footer p, h4{
+.footer p, h4 {
     color: var(--secondary-color);
     font-family: var(--secondary-font);
     text-align: center;
 }
 
-.social img{
+.social img {
     margin: var(--spacing-medium);
     height: 64px;
 }
 
-.contact{
+.contact {
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-top: var(--spacing-medium);
 }
 
-.copyright{
+.copyright {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.lineUp{
+.lineUp {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -44,35 +42,36 @@
     margin-bottom: calc(var(--spacing-large) * 2);
 }
 
-@media screen and (max-width: 1024px){
-    .footer{
+@media screen and (max-width: 1024px) {
+    .footer {
         flex-direction: column;
         padding: 0 var(--spacing-large);
     }
-
-    .lineUp{
+    .lineUp {
         flex-direction: column;
         margin: var(--spacing-medium);
     }
-
-    .contact{
+    .contact {
         margin-top: var(--spacing-large);
         margin-bottom: var(--spacing-large);
     }
-
-    .social img{
+    .social img {
         height: 45px;
     }
-
-    .footer p{
+    .footer p {
         font-size: 14px;
     }
-    .footer h4{
+    .footer h4 {
         font-size: 20px;
         margin-bottom: var(--spacing-medium);
     }
-
-    .copyright{
+    .copyright {
         margin-bottom: 80px;
+    }
+}
+
+@media screen and (min-width: 415px) and (max-width: 768px) {
+    .copyright {
+        margin-bottom: var(--spacing-medium);
     }
 }

@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=UnifrakturMaguntia&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Fondamento:ital@0;1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Delius+Swash+Caps&display=swap');
 * {
   box-sizing: border-box;
 }
@@ -15,7 +15,7 @@ body {
 
 :root {
   --main-font: 'UnifrakturMaguntia', cursive;
-  --secondary-font: 'Fondamento', cursive;
+  --secondary-font: 'Delius Swash Caps', cursive;
   --main-color: #001902;
   --secondary-color: #FFFCEE;
   --warm-color:#E9AE60;
