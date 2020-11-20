@@ -19,6 +19,7 @@ import Home from './components/Home/Home';
 import Footer from './components/Footer/Footer';
 import Header from './components/Header/Header';
 import Intro from './components/Intro/Intro';
+import SelectionPlants from './components/SelectionPlants/SelectionPlants';
 
 export const potions = [
   {
@@ -199,6 +200,7 @@ function App() {
       <PlantsContext.Provider value={{plants}}>
         <Potions activePotions = {activePotions} />
       </PlantsContext.Provider>
+      <SelectionPlants plants = {plants} />
       <Footer />
     </div>
   );
