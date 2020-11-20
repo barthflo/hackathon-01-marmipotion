@@ -17,6 +17,7 @@ import Potions from './components/Potions/Potions';
 import {useState, useEffect} from 'react';
 import Home from './components/Home/Home';
 import Header from './components/Header/Header';
+import Intro from './components/Intro/Intro';
 
 export const potions = [
   {
@@ -193,7 +194,8 @@ function App() {
     <div className="App">
       <Home />
       <Header activePotions = {activePotions} toggleActive={toggleActive}/>
-      <Potions activePotions = {activePotions} /> 
+      <Intro />
+      <Potions activePotions = {activePotions} />
     </div>
   );
 }
