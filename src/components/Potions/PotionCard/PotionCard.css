@@ -16,10 +16,14 @@
     color:var(--secondary-color);
     font-size : 1.8em;
 }
+
 .potion-card p{
     font-family:var(--secondary-font);
     color: var(--secondary-color);
     font-size:1.3em;
+}
+.recipe-container p:last-of-type{
+    color:var(--warm-color);
 }
 @media screen and (min-width: 576px){
     .potion-card figure{
@@ -38,6 +42,9 @@
     .potion-card figure{
         width:250px;
         height:250px;
+    }
+    .potion-card .card-body{
+        min-height:270px;
     }
 }
 
