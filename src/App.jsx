@@ -16,6 +16,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Potions from './components/Potions/Potions';
 import {useState, useEffect} from 'react';
 import Home from './components/Home/Home';
+import Footer from './components/Footer/Footer';
 import Header from './components/Header/Header';
 import Intro from './components/Intro/Intro';
 
@@ -198,6 +199,7 @@ function App() {
       <Header activePotions = {activePotions} toggleActive={toggleActive}/>
       <Intro />
       <Potions activePotions = {activePotions} />
+      <Footer />
     </div>
   );
 }
